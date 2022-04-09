@@ -33,11 +33,13 @@ var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 
 var place ;
-$.getJSON("./place.json",function(dat){
+$.getJSON("./placept1.json",function(dat){
     place = dat;
-
-    console.log("loaded");
-    amoooggguusss();
+    $.getJSON("./placept2.json",function(dat){
+        place = place.concat(dat);
+        console.log("loaded");
+        amoooggguusss();
+    });
 });
 
 
@@ -142,4 +144,3 @@ function drawAmogusTest(){
         }
     }
 }
-drawAmogusTest();
