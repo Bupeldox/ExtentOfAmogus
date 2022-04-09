@@ -124,6 +124,7 @@ function amoooggguusss(){
     }
 }
     console.log("done");
+    $("#loadingMessage").hide();
 }
 
 var testetetse = 0;
