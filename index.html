@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .imgcontainer{
+            position: relative;
+
+        }
+        .imgcontainer >*{
+            position: absolute;
+            top:0;
+            left:0;
+            image-rendering: pixelated;;
+            
+        }
+        .noTouchy{
+            -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+        }
+    </style>
+</head>
+<body>
+hello!
+
+<div class="imgcontainer">
+<img src="place.png" class="noTouchy" alt="" id="realplace">
+<canvas id="canvas" class="noTouchy" height="2000" width="2000"></canvas>
+</div>
+    
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
+
+<script src="script.js">
+    
+    
+</script>
+
+<script>
+    var opa = 1;
+    $("body").on("click",(e)=>{
+        if(opa == 1){
+            opa = 0.1;
+        }else{
+            opa = 1;
+        }
+        $("#realplace").css("opacity",opa);
+    })
+    </script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
