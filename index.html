@@ -10,6 +10,7 @@
             position: relative;
 
         }
+        
         .imgcontainer >*{
             position: absolute;
             top:0;
@@ -26,13 +27,30 @@
             user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome, Edge, Opera and Firefox */
         }
+        #realplace{
+            opacity: 1;
+            will-change: opacity;
+        }
+        #canvas{
+            opacity: 0;
+            will-change: opacity;
+        }
+        .imposterVision #realplace{
+            opacity: 0.1;
+        }
+        .imposterVision #canvas{
+            opacity: 1;
+        }
+
+
     </style>
 </head>
 <body>
     <h1>Amogus</h1>
-    <em id="loadingMessage">Finding Amogus pls w8</em>
-<div class="imgcontainer">
-<img src="place.png" style="opacity:0.1" class="noTouchy" alt="" id="realplace">
+    <em id="loadingMessage">Finding Amogus pls w8</em><br>
+    <em>Click to toggle imposter vision</em>
+<div class="imgcontainer imposterVision">
+<img src="place.png" class="noTouchy" alt="" id="realplace">
 <canvas id="canvas" class="noTouchy" height="2000" width="2000"></canvas>
 </div>
     
@@ -46,12 +64,8 @@
 <script>
     var opa = 0.1;
     $("body").on("click",(e)=>{
-        if(opa == 1){
-            opa = 0.1;
-        }else{
-            opa = 1;
-        }
-        $("#realplace").css("opacity",opa);
+     
+        $(".imgcontainer").toggleClass("imposterVision")
     })
     </script>
 </body>
