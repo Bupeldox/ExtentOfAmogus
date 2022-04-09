@@ -29,10 +29,10 @@
     </style>
 </head>
 <body>
-hello!
-
+    <h1>Amogus</h1>
+    <em id="loadingMessage">Finding Amogus pls w8</em>
 <div class="imgcontainer">
-<img src="place.png" class="noTouchy" alt="" id="realplace">
+<img src="place.png" style="opacity:0.1" class="noTouchy" alt="" id="realplace">
 <canvas id="canvas" class="noTouchy" height="2000" width="2000"></canvas>
 </div>
     
@@ -44,7 +44,7 @@ hello!
 </script>
 
 <script>
-    var opa = 1;
+    var opa = 0.1;
     $("body").on("click",(e)=>{
         if(opa == 1){
             opa = 0.1;
