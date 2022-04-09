@@ -40,6 +40,17 @@ var amogi = [
     ]
 ];
 
+function transpose(a)
+{
+  return a[0].map(function (_, c) { return a.map(function (r) { return r[c]; }); });
+}
+
+var sideways = [];
+for(var i=0;i<amogi.length;i++){
+    sideways.push(transpose(amogi[i]));
+}
+amogi = amogi.concat(sideways);
+
 
 var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
